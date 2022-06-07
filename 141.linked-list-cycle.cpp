@@ -13,11 +13,27 @@
  *     ListNode(int x) : val(x), next(NULL) {}
  * };
  */
-class Solution {
+class Solution
+{
 public:
-    bool hasCycle(ListNode *head) {
-        
+    bool hasCycle(ListNode *head)
+    {
+
+        ListNode *p = head;
+        ListNode *q = p;
+
+        while (p != q)
+        {
+
+            p = p->next;
+            q = q->next;
+            q = q ? q->next : q;
+        }
+
+        if (p == q)
+            return true;
+        else
+            return false;
     }
 };
 // @lc code=end
-

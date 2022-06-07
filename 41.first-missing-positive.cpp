@@ -21,6 +21,10 @@ public:
                 {
                     n++;
                 }
+                else if (i > n)
+                {
+                    break;
+                }
             }
         }
 
