@@ -19,16 +19,21 @@ public:
     bool hasCycle(ListNode *head)
     {
 
+        if (head == NULL || head->next == NULL)
+            return false;
+
         ListNode *p = head;
         ListNode *q = p;
 
-        while (p != q)
+        do
         {
 
+            if (q == NULL)
+                return false;
             p = p->next;
             q = q->next;
             q = q ? q->next : q;
-        }
+        } while (p != q);
 
         if (p == q)
             return true;
