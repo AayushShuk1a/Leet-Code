@@ -15,7 +15,8 @@ public:
         int left = 0, right = 0;
         int sum = 0;
         int maxSum = 0;
-        while (right < nums.size())
+
+            while (right < nums.size())
         {
             mpp[nums[right]]++;
             sum += nums[right];
