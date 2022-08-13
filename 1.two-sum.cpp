@@ -10,17 +10,16 @@ class Solution
 public:
     vector<int> twoSum(vector<int> &nums, int target)
     {
-        unordered_map<int, int> umpp;
-
+        unordered_map<int, int> umap;
         for (int i = 0; i < nums.size(); i++)
         {
-            if (umpp.find(target - nums[i]) != umpp.end())
+            if (umap.find(target - nums[i]) != umap.end())
             {
-                return {umpp.find(target - nums[i])->second, i};
+                return {umap.find(target - nums[i])->second, i};
             }
             else
             {
-                umpp.insert({nums[i], i});
+                umap.insert({nums[i], i});
             }
         }
         return {};
