@@ -11,28 +11,29 @@ public:
     int maxArea(vector<int> &height)
     {
 
-        int left = 0, max = 0, right = height.size() - 1;
-
-        while (left < right)
+       int left=0,right=height.size()-1;
+       int maximum=0;
+       
+int area;
+       while(left<right)
+       {
+        
+        if(height[left]>height[right])
         {
-            int area;
-            if (height[left] > height[right])
-            {
-                area = (height[right] * (right - left));
-                right--;
-            }
-            else
-            {
-                area = (height[left] * (right - left));
-                left++;
-            }
-
-            if (max < area)
-            {
-                max = area;
-            }
+            area=(height[right]*(right-left));
+            right--;
         }
-        return max;
+        else
+        {
+            area=(height[left]*(right-left));
+            left++;
+        }
+         maximum=max(maximum,area);
+        
+       }
+
+
+       return maximum;
     }
 };
 // @lc code=end
