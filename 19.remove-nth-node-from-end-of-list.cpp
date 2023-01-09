@@ -22,11 +22,8 @@ public:
         ListNode *tail=head;
         ListNode *del;
 
-        
-
         for(int i=0;i<n;i++)
         {
-            
             temp=temp->next;
         }
 
@@ -34,8 +31,6 @@ public:
         {
             del=head->next;
             delete head;
-            
-
             return del;
         }
 
@@ -44,13 +39,11 @@ public:
             temp=temp->next;
             tail=tail->next;
 
-
         }
 
         del=tail->next;
-        tail->next=tail->next->next;
+        tail->next=del->next;
         delete del;
-
         return head;
     
 
