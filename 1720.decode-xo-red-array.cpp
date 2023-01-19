@@ -14,7 +14,8 @@ public:
 
         for(int i=0;i<encoded.size();i++)
         {
-            int x=encoded[i]^ans[i];
+            //Inverse of XOR is XOR
+            int x=encoded[i]^ans[i];   
             ans.push_back(x);
         }
 
