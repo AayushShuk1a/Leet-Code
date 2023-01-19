@@ -12,6 +12,8 @@ public:
         int m=matrix.size();
         int n=matrix[0].size();
 
+        cout<<m<<endl<<n;
+
         int low=0,high=(m*n)-1;
         while(low<=high)
         {

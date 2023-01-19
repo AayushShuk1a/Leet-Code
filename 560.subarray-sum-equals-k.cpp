@@ -21,7 +21,6 @@ public:
             {
                 c=m[sum-k]+c;
             }
-
             if(m.find(sum)!=m.end())
             {
                 m[sum]++;
