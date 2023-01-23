@@ -1,7 +1,7 @@
 /*
  * @lc app=leetcode id=191 lang=cpp
  *
- * [191] Number of 1 Bits
+ * [191] 
  */
 
 // @lc code=start
